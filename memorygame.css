@@ -1,0 +1,16 @@
+#board{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: repeat();לחפש את זה */
+}
+
+.cardsClass {
+    background-color: tomato;
+    color: white;
+    border: 3px solid black;
+    border-radius: 3px;
+    margin: 20px;
+    padding: 20px;
+    width: 100px;
+    height: 200px;
+  }

@@ -5,6 +5,7 @@ function createCard(idx){
     const cardEl = document.createElement("div");
     cardEl.innerHTML=cards[idx];
     cardEl.id=idx;
+    cardEl.className="cardsClass"
     return cardEl
 }
 
