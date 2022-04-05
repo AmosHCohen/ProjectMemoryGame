@@ -1,4 +1,5 @@
 const cards=["amos","shira","Elyashiv","harel","beery","nave","ori","amos","shira","Elyashiv","harel","beery","nave","ori"]
+const board = document.getElementById("board");
 //TODO
 function createCard(idx){
     const cardEl = document.createElement("div");
@@ -20,10 +21,9 @@ function shuffle(arr) {
         }
 
 //function init(){
-    shuffle(cards)
-    const board = document.getElementById("board");
+    shuffle(cards);
     for (i in cards){
-        const element=createElement[i];
+        const element=createCard(i);
         board.appendChild(element);
     }
 //}
