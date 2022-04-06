@@ -6,6 +6,7 @@ function createCard(idx){
     cardEl.innerHTML=cards[idx];
     cardEl.id=idx;
     cardEl.className="cardsClass"
+
     return cardEl
 }
 

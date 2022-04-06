@@ -1,16 +1,23 @@
 #board{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr ;
   /* grid-template-columns: repeat();לחפש את זה */
 }
 
 .cardsClass {
-    background-color: tomato;
-    color: white;
-    border: 3px solid black;
-    border-radius: 3px;
+    place-content: center;
+    background-color: rgb(220, 137, 195);
+    color: #75629c;
+    border: 1px solid black;
+    border-radius: 5px;
     margin: 20px;
-    padding: 20px;
+    padding: 30px;
     width: 100px;
-    height: 200px;
+    height: 150px;
   }
+.cardsClass:hover {
+    position: relative;
+    top: -5px; /* this will raise the element */
+    padding-bottom: 10px;
+}
