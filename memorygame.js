@@ -10,7 +10,7 @@ const buttons = [
 },
 {
     name:"pics",
-    content:["💓", "💓", "💖", "💖", "💘", "💘", "💕", "💕", "💝", "💝", "💌", "💌", "💑", "💑", "💔", "💔", "💛", "💛"]
+    content:['<img src="image/1.jpeg" width="151.04" height="174.8">', '<img src="image/1.jpeg" width="151.04" height="174.8">', '<img src="image/2.jpeg" width="151.04" height="174.8">', '<img src="image/2.jpeg" width="151.04" height="174.8">', '<img src="image/3.jpeg" width="151.04" height="174.8">', '<img src="image/3.jpeg" width="151.04" height="174.8">', '<img src="image/4.jpeg" width="151.04" height="174.8">', '<img src="image/4.jpeg" width="151.04" height="174.8">', '<img src="image/5.jpeg" width="151.04" height="174.8">', '<img src="image/5.jpeg" width="151.04" height="174.8">', '<img src="image/6.jpeg" width="151.04" height="174.8">', '<img src="image/6.jpeg" width="151.04" height="174.8">', '<img src="image/7.jpeg" width="151.04" height="174.8">', '<img src="image/7.jpeg" width="151.04" height="174.8">', '<img src="image/8.jpeg" width="151.04" height="174.8">', '<img src="image/8.jpeg" width="151.04" height="174.8">', '<img src="image/9.jpeg" width="151.04" height="174.8">', '<img src="image/9.jpeg" width="15104" height="174.8">']
 }
 ]
 
@@ -53,7 +53,7 @@ function createButton(buttons,idx){
     const button = document.createElement("button")
     button.innerHTML=buttons[idx].name
     // button.id=[i]
-    button.className="visible"
+    button.className="btn"
     btns.appendChild(button)
 
     button.addEventListener('click', ()=>{
@@ -82,7 +82,7 @@ function newcards (shuffledcards,idx) {
 function createcard(i,idx) {
     const cardel = document.createElement("div")
     //<div></div>
-    cardel.innerHTML = '<img src="pictures/6793.jpg"  width="151.04" height="174.8" >';
+    cardel.innerHTML = '<img src="image/question.png"  width="151.04" height="174.8" >';
     cardel.id = i;
     cardel.className = "card";
     cardel.addEventListener("click", () => {
@@ -141,8 +141,8 @@ function createcard(i,idx) {
 
             setTimeout(() => {
 
-                document.getElementById(a).innerHTML = '<img src="pictures/6793.jpg"  width="151.04" height="174.8" >';
-                document.getElementById(b).innerHTML = '<img src="pictures/6793.jpg"  width="151.04" height="174.8" >';
+                document.getElementById(a).innerHTML = '<img src="image/question.png"  width="151.04" height="174.8" >';
+                document.getElementById(b).innerHTML = '<img src="image/question.png"  width="151.04" height="174.8" >';
             }, 1000);
         }
         counter = 0;  // חזרה למשחק
