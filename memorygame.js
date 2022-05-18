@@ -4,19 +4,37 @@
 // const cards = ['<img src="pictures/IMG_sushi.jpg" width="151.04" height="174.8">','<img src="pictures/IMG_bowling.png.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_bowling2.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_chocolate.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_hat.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_pirate.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_popcorn.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_snow.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_princess.jpg" width="151.04" height="174.8">'];
 // const cards = ['<img src="pictures/IMG_sushi.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_bowling.png.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_bowling2.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_chocolate.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_hat.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_pirate.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_popcorn.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_snow.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_princess.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_sushi.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_bowling.png.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_bowling2.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_chocolate.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_hat.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_pirate.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_popcorn.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_snow.jpg" width="151.04" height="174.8">', '<img src="pictures/IMG_princess.jpg" width="151.04" height="174.8">']
 const buttons = [
-{
-    name:"icons",
-    content:["💓", "💓", "💖", "💖", "💘", "💘", "💕", "💕", "💝", "💝", "💌", "💌", "💑", "💑", "💔", "💔", "💛", "💛"]
-},
-{
-    name:"pics",
-    content:['<img src="image/1.jpeg" width="151.04" height="174.8">', '<img src="image/1.jpeg" width="151.04" height="174.8">', '<img src="image/2.jpeg" width="151.04" height="174.8">', '<img src="image/2.jpeg" width="151.04" height="174.8">', '<img src="image/3.jpeg" width="151.04" height="174.8">', '<img src="image/3.jpeg" width="151.04" height="174.8">', '<img src="image/4.jpeg" width="151.04" height="174.8">', '<img src="image/4.jpeg" width="151.04" height="174.8">', '<img src="image/5.jpeg" width="151.04" height="174.8">', '<img src="image/5.jpeg" width="151.04" height="174.8">', '<img src="image/6.jpeg" width="151.04" height="174.8">', '<img src="image/6.jpeg" width="151.04" height="174.8">', '<img src="image/7.jpeg" width="151.04" height="174.8">', '<img src="image/7.jpeg" width="151.04" height="174.8">', '<img src="image/8.jpeg" width="151.04" height="174.8">', '<img src="image/8.jpeg" width="151.04" height="174.8">', '<img src="image/9.jpeg" width="151.04" height="174.8">', '<img src="image/9.jpeg" width="15104" height="174.8">']
-}
+    {
+        name: "icons",
+        content: ["💓", "💓", "💖", "💖", "💘", "💘", "💕", "💕", "💝", "💝", "💌", "💌", "💑", "💑", "💔", "💔", "💛", "💛"]
+    },
+    {
+        name: "pics",
+        content: [
+            '<img src="image/1.jpeg" width="151.04" height="174.8">',
+            '<img src="image/1.jpeg" width="151.04" height="174.8">',
+            '<img src="image/2.jpeg" width="151.04" height="174.8">',
+            '<img src="image/2.jpeg" width="151.04" height="174.8">',
+            '<img src="image/3.jpeg" width="151.04" height="174.8">',
+            '<img src="image/3.jpeg" width="151.04" height="174.8">',
+            '<img src="image/4.jpeg" width="151.04" height="174.8">',
+            '<img src="image/4.jpeg" width="151.04" height="174.8">',
+            '<img src="image/5.jpeg" width="151.04" height="174.8">',
+            '<img src="image/5.jpeg" width="151.04" height="174.8">',
+            '<img src="image/6.jpeg" width="151.04" height="174.8">',
+            '<img src="image/6.jpeg" width="151.04" height="174.8">',
+            '<img src="image/7.jpeg" width="151.04" height="174.8">',
+            '<img src="image/7.jpeg" width="151.04" height="174.8">',
+            '<img src="image/8.jpeg" width="151.04" height="174.8">',
+            '<img src="image/8.jpeg" width="151.04" height="174.8">',
+            '<img src="image/9.jpeg" width="151.04" height="174.8">',
+            '<img src="image/9.jpeg" width="151.04" height="174.8">']
+    }
 ]
 
-let choice=[]
+let choice = []
 
-let shuffledcards=[]
+let shuffledcards = []
 
 let players = [];
 
@@ -34,6 +52,7 @@ let thisplayer = 0;
 
 let winner = 0;
 
+
 let playernum = Number(prompt('How many players?'));
 
 createplayer(playernum);
@@ -44,42 +63,51 @@ function createplayer(playernum) {
     }
 }
 //-------------------------------------------//
-for (i in buttons){
-    createButton(buttons,i)
+for (i in buttons) {
+    createButton(buttons, i)
 }
 
-function createButton(buttons,idx){
+function createButton(buttons, idx) {
     const btns = document.getElementById("btns");
     const button = document.createElement("button")
-    button.innerHTML=buttons[idx].name
+    button.innerHTML = buttons[idx].name
     // button.id=[i]
-    button.className="btn"
+    button.className = "btn"
     btns.appendChild(button)
 
-    button.addEventListener('click', ()=>{
-        choice=buttons[idx].content
-        Shuffle(choice,idx)
+    button.addEventListener('click', () => {
+        choice = buttons[idx].content
+        Shuffle(choice, idx)
+        currentplayer(thisplayer)
+
     })
 }
 //-------------------------------------------//
 
-function Shuffle(choice,idx){
-     shuffledcards = choice.sort((a, b) => 0.5 - Math.random());
-     newcards(shuffledcards,idx)
-    }
+function currentplayer(thisplayer) {
+    const currentPlayer = document.getElementById("currentplayer")
+    currentPlayer.innerHTML = `It's ${players[thisplayer].name} turn now, score: ${players[thisplayer].score}`
+}
+
 //-------------------------------------------//
-    
-function newcards (shuffledcards,idx) {
+
+function Shuffle(choice, idx) {
+    shuffledcards = choice.sort((a, b) => 0.5 - Math.random());
+    newcards(shuffledcards, idx)
+}
+//-------------------------------------------//
+
+function newcards(shuffledcards, idx) {
     const board = document.getElementById("board");
     for (i in shuffledcards) {
-        let element1 = createcard(i,idx)
+        let element1 = createcard(i, idx)
         //<div id = "board">
         board.appendChild(element1);
     }
-    }
+}
 //-------------------------------------------//
 
-function createcard(i,idx) {
+function createcard(i, idx) {
     const cardel = document.createElement("div")
     //<div></div>
     cardel.innerHTML = '<img src="image/question.png"  width="151.04" height="174.8" >';
@@ -88,12 +116,12 @@ function createcard(i,idx) {
     cardel.addEventListener("click", () => {
         cardel.innerHTML = buttons[idx].content[i];                 //כרטיס פתוח
         counter += 1;
-        SelectedCCards(counter,i)
+        SelectedCCards(counter, i)
 
     })
-//-------------------------------------------//
+    //-------------------------------------------//
 
-    function SelectedCCards(counter,i) {            //בחירת כרטיסים לבדיקה
+    function SelectedCCards(counter, i) {            //בחירת כרטיסים לבדיקה
         if (counter == 1) {
             card1 = i;
             if (openedCard.includes(card1)) {    //וידוא שנבחרו שהכרטיס לא פתוח 
@@ -113,14 +141,14 @@ function createcard(i,idx) {
                 counter = 1;
             }
             else if (card1 && card2) {              //בדיקה שנבחרו שני כרטיסים
-                isMatch(card1, card2,idx);
+                isMatch(card1, card2, idx);
             }
         }
     }
 
-//-------------------------------------------//
+    //-------------------------------------------//
 
-    function isMatch(card1, card2,idx) {
+    function isMatch(card1, card2, idx) {
         if (buttons[idx].content[card1] == buttons[idx].content[card2]) {//השוואת שני הכרטיסים שנבחרו
             openedCard.push(card1, card2);//הכנסת הכרטיסים למערך של כרטיסים שנמצאו
             winCounter += 2
@@ -129,7 +157,7 @@ function createcard(i,idx) {
                 setTimeout(() => {       //סיום המשחק
                     whoisthewinner()
                     alert(`${players[winner].name}  well done!
-                    your score is ${players[winner].score}`)
+                    your score is ${players[winner].score} `)
                     return "well done!"
                 }, 1000);
             }
@@ -150,6 +178,8 @@ function createcard(i,idx) {
         card2 = '';
         // debugger
         playerturn();
+        setTimeout(() => { currentplayer(thisplayer) }, 1000);
+
     }
 
     return cardel;
