@@ -70,6 +70,7 @@ for (i in buttons) {
 function createButton(buttons, idx) {
     const btns = document.getElementById("btns");
     const button = document.createElement("button")
+
     button.innerHTML = buttons[idx].name
     // button.id=[i]
     button.className = "btn"
@@ -79,6 +80,7 @@ function createButton(buttons, idx) {
         choice = buttons[idx].content
         Shuffle(choice, idx)
         currentplayer(thisplayer)
+        btns.classList.add("hide")
 
     })
 }
@@ -153,6 +155,7 @@ function createcard(i, idx) {
             openedCard.push(card1, card2);//הכנסת הכרטיסים למערך של כרטיסים שנמצאו
             winCounter += 2
             players[thisplayer].score += 100;
+            currentplayer(thisplayer);
             if (winCounter == buttons[idx].content.length) {
                 setTimeout(() => {       //סיום המשחק
                     whoisthewinner()
@@ -172,13 +175,13 @@ function createcard(i, idx) {
                 document.getElementById(a).innerHTML = '<img src="image/question.png"  width="151.04" height="174.8" >';
                 document.getElementById(b).innerHTML = '<img src="image/question.png"  width="151.04" height="174.8" >';
             }, 1000);
+            playerturn();
+            setTimeout(() => { currentplayer(thisplayer) }, 1000);
         }
         counter = 0;  // חזרה למשחק
         card1 = '';
         card2 = '';
         // debugger
-        playerturn();
-        setTimeout(() => { currentplayer(thisplayer) }, 1000);
 
     }
 

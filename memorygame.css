@@ -9,11 +9,15 @@ body {
 
 #title{
   justify-content: center;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 #board{display: grid;
-  gap: 55px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;}
+  gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
   
   
   .card{
@@ -22,14 +26,44 @@ body {
       justify-content: center;
   cursor: pointer;
   font-size: 110px;
-  /* background-color: whitesmoke; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   
 }
 
-/* .btn{
-  
-} */
+#btns{
+  justify-content: center;
+  text-align: center;
+
+}
+.btn{
+  display: inline-block;
+  outline: 0;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 9px 22px;
+  font-size: 20px;
+  height: 30px;
+  font-weight: 350;
+  color: #fff;
+  text-align: center;
+  line-height: normal;
+  background: linear-gradient(90deg,#5522fa 0,#0074e4 100%);
+  border-radius: 50px;
+  transition: color .2s ease,background-color .2s ease,box-shadow .2s ease;
+  }
+  .btn:hover{
+      box-shadow: 0 0 0 0.15rem #5ceace;
+  }
+ 
+.hide{
+  visibility: hidden;
+} 
+
+#currentplayer{
+  margin-top: 4px;
+  margin-bottom: 5px;
+}
 /* .card img
 {
 max-width: 100%;
